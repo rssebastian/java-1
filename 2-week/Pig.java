@@ -174,3 +174,438 @@ public class Pig {
         }
     }
 }
+
+// TEST CASE OUTPUT
+// Starting your turn:
+// --------------------------------------------
+// Your score is currently: 0
+// The computer's score is currently: 0
+// The last roll was a: 1
+// The current turn's total is: 0
+// --------------------------------------------
+// You rolled a 1! You lose this round's points. The computer goes next.
+// --------------------------------------------
+// Starting the computer's turn:
+// --------------------------------------------
+// The computer rolled a 1!
+// The computer rolled a 1! It loses this round's points. You go next.
+// --------------------------------------------
+// Starting your turn:
+// --------------------------------------------
+// Your score is currently: 0
+// The computer's score is currently: 0
+// The last roll was a: 3
+// The current turn's total is: 3
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 0
+// The computer's score is currently: 0
+// The last roll was a: 3
+// The current turn's total is: 6
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 0
+// The computer's score is currently: 0
+// The last roll was a: 2
+// The current turn's total is: 8
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 0
+// The computer's score is currently: 0
+// The last roll was a: 3
+// The current turn's total is: 11
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 0
+// The computer's score is currently: 0
+// The last roll was a: 6
+// The current turn's total is: 17
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 0
+// The computer's score is currently: 0
+// The last roll was a: 3
+// The current turn's total is: 20
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 0
+// The computer's score is currently: 0
+// The last roll was a: 3
+// The current turn's total is: 23
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 0
+// The computer's score is currently: 0
+// The last roll was a: 5
+// The current turn's total is: 28
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): h
+// You chose to hold!
+// Starting the computer's turn:
+// --------------------------------------------
+// The computer rolled a 2!
+// The computer rolled a 2!
+// The computer rolled a 6!
+// The computer rolled a 6!
+// The computer rolled a 3!
+// The computer rolled a 1!
+// The computer rolled a 1! It loses this round's points. You go next.
+// --------------------------------------------
+// Starting your turn:
+// --------------------------------------------
+// Your score is currently: 28
+// The computer's score is currently: 0
+// The last roll was a: 4
+// The current turn's total is: 4
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 28
+// The computer's score is currently: 0
+// The last roll was a: 4
+// The current turn's total is: 8
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 28
+// The computer's score is currently: 0
+// The last roll was a: 2
+// The current turn's total is: 10
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 28
+// The computer's score is currently: 0
+// The last roll was a: 5
+// The current turn's total is: 15
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 28
+// The computer's score is currently: 0
+// The last roll was a: 4
+// The current turn's total is: 19
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 28
+// The computer's score is currently: 0
+// The last roll was a: 6
+// The current turn's total is: 25
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 28
+// The computer's score is currently: 0
+// The last roll was a: 3
+// The current turn's total is: 28
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): h
+// You chose to hold!
+// Starting the computer's turn:
+// --------------------------------------------
+// The computer rolled a 1!
+// The computer rolled a 1! It loses this round's points. You go next.
+// --------------------------------------------
+// Starting your turn:
+// --------------------------------------------
+// Your score is currently: 56
+// The computer's score is currently: 0
+// The last roll was a: 3
+// The current turn's total is: 3
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 56
+// The computer's score is currently: 0
+// The last roll was a: 4
+// The current turn's total is: 7
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 56
+// The computer's score is currently: 0
+// The last roll was a: 2
+// The current turn's total is: 9
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 56
+// The computer's score is currently: 0
+// The last roll was a: 2
+// The current turn's total is: 11
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 56
+// The computer's score is currently: 0
+// The last roll was a: 5
+// The current turn's total is: 16
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 56
+// The computer's score is currently: 0
+// The last roll was a: 3
+// The current turn's total is: 19
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): h
+// You chose to hold!
+// Starting the computer's turn:
+// --------------------------------------------
+// The computer rolled a 6!
+// The computer rolled a 6!
+// The computer rolled a 6!
+// The computer rolled a 6!
+// The computer rolled a 1!
+// The computer rolled a 1! It loses this round's points. You go next.
+// --------------------------------------------
+// Starting your turn:
+// --------------------------------------------
+// Your score is currently: 75
+// The computer's score is currently: 0
+// The last roll was a: 1
+// The current turn's total is: 0
+// --------------------------------------------
+// You rolled a 1! You lose this round's points. The computer goes next.
+// --------------------------------------------
+// Starting the computer's turn:
+// --------------------------------------------
+// The computer rolled a 4!
+// The computer rolled a 3!
+// The computer rolled a 1!
+// The computer rolled a 1! It loses this round's points. You go next.
+// --------------------------------------------
+// Starting your turn:
+// --------------------------------------------
+// Your score is currently: 75
+// The computer's score is currently: 0
+// The last roll was a: 2
+// The current turn's total is: 2
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 75
+// The computer's score is currently: 0
+// The last roll was a: 2
+// The current turn's total is: 4
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 75
+// The computer's score is currently: 0
+// The last roll was a: 2
+// The current turn's total is: 6
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 75
+// The computer's score is currently: 0
+// The last roll was a: 1
+// The current turn's total is: 0
+// --------------------------------------------
+// You rolled a 1! You lose this round's points. The computer goes next.
+// --------------------------------------------
+// Starting the computer's turn:
+// --------------------------------------------
+// The computer rolled a 5!
+// The computer rolled a 3!
+// The computer rolled a 1!
+// The computer rolled a 1! It loses this round's points. You go next.
+// --------------------------------------------
+// Starting your turn:
+// --------------------------------------------
+// Your score is currently: 75
+// The computer's score is currently: 0
+// The last roll was a: 3
+// The current turn's total is: 3
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 75
+// The computer's score is currently: 0
+// The last roll was a: 6
+// The current turn's total is: 9
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 75
+// The computer's score is currently: 0
+// The last roll was a: 1
+// The current turn's total is: 0
+// --------------------------------------------
+// You rolled a 1! You lose this round's points. The computer goes next.
+// --------------------------------------------
+// Starting the computer's turn:
+// --------------------------------------------
+// The computer rolled a 5!
+// The computer rolled a 5!
+// The computer rolled a 5!
+// The computer rolled a 1!
+// The computer rolled a 1! It loses this round's points. You go next.
+// --------------------------------------------
+// Starting your turn:
+// --------------------------------------------
+// Your score is currently: 75
+// The computer's score is currently: 0
+// The last roll was a: 6
+// The current turn's total is: 6
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): h
+// You chose to hold!
+// Starting the computer's turn:
+// --------------------------------------------
+// The computer rolled a 2!
+// The computer rolled a 6!
+// The computer rolled a 5!
+// The computer rolled a 6!
+// The computer rolled a 1!
+// The computer rolled a 1! It loses this round's points. You go next.
+// --------------------------------------------
+// Starting your turn:
+// --------------------------------------------
+// Your score is currently: 81
+// The computer's score is currently: 0
+// The last roll was a: 1
+// The current turn's total is: 0
+// --------------------------------------------
+// You rolled a 1! You lose this round's points. The computer goes next.
+// --------------------------------------------
+// Starting the computer's turn:
+// --------------------------------------------
+// The computer rolled a 2!
+// The computer rolled a 2!
+// The computer rolled a 1!
+// The computer rolled a 1! It loses this round's points. You go next.
+// --------------------------------------------
+// Starting your turn:
+// --------------------------------------------
+// Your score is currently: 81
+// The computer's score is currently: 0
+// The last roll was a: 3
+// The current turn's total is: 3
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 81
+// The computer's score is currently: 0
+// The last roll was a: 5
+// The current turn's total is: 8
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 81
+// The computer's score is currently: 0
+// The last roll was a: 2
+// The current turn's total is: 10
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 81
+// The computer's score is currently: 0
+// The last roll was a: 5
+// The current turn's total is: 15
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 81
+// The computer's score is currently: 0
+// The last roll was a: 1
+// The current turn's total is: 0
+// --------------------------------------------
+// You rolled a 1! You lose this round's points. The computer goes next.
+// --------------------------------------------
+// Starting the computer's turn:
+// --------------------------------------------
+// The computer rolled a 1!
+// The computer rolled a 1! It loses this round's points. You go next.
+// --------------------------------------------
+// Starting your turn:
+// --------------------------------------------
+// Your score is currently: 81
+// The computer's score is currently: 0
+// The last roll was a: 2
+// The current turn's total is: 2
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 81
+// The computer's score is currently: 0
+// The last roll was a: 3
+// The current turn's total is: 5
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 81
+// The computer's score is currently: 0
+// The last roll was a: 4
+// The current turn's total is: 9
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 81
+// The computer's score is currently: 0
+// The last roll was a: 3
+// The current turn's total is: 12
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 81
+// The computer's score is currently: 0
+// The last roll was a: 6
+// The current turn's total is: 18
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): r
+// You chose to reroll!
+// --------------------------------------------
+// Your score is currently: 81
+// The computer's score is currently: 0
+// The last roll was a: 5
+// The current turn's total is: 23
+// --------------------------------------------
+// What would you like to do? (r = roll, h = hold): h
+// You chose to hold!
+// --------------------------------------------
+// Congratulations, you've won!
+// Your final score was: 104
+// The computer's final score was: 0
+// Thanks for playing!
+// --------------------------------------------
