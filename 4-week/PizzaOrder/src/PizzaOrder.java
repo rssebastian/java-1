@@ -29,7 +29,7 @@ public class PizzaOrder {
 
         if (order.getPizza2() != null) {
             this.pizza2 = new Pizza();
-            this.pizza1.setSize(order.getPizza2().getSize());
+            this.pizza2.setSize(order.getPizza2().getSize());
             this.pizza2.setNumCheese(order.getPizza2().getNumCheese());
             this.pizza2.setNumPepperoni(order.getPizza2().getNumPepperoni());
             this.pizza2.setNumHam(order.getPizza2().getNumHam());
@@ -37,7 +37,7 @@ public class PizzaOrder {
 
         if (order.getPizza3() != null) {
             this.pizza3 = new Pizza();
-            this.pizza1.setSize(order.getPizza3().getSize());
+            this.pizza3.setSize(order.getPizza3().getSize());
             this.pizza3.setNumCheese(order.getPizza3().getNumCheese());
             this.pizza3.setNumPepperoni(order.getPizza3().getNumPepperoni());
             this.pizza3.setNumHam(order.getPizza3().getNumHam());
@@ -108,6 +108,7 @@ public class PizzaOrder {
         String linebreak = "---------------------------------";
         System.out.println(linebreak);
         System.out.println("Let me get started on your first order: ");
+        System.out.println(linebreak);
 
         // Code to create a large pizza, 1 cheese, 1 ham
         Pizza pizza1 = new Pizza();
@@ -145,12 +146,12 @@ public class PizzaOrder {
         // Use copyconstructor
         System.out.println("Copying your last order...");
         System.out.println("Starting your new order...");
+        System.out.println(linebreak);
         PizzaOrder order2 = new PizzaOrder(order1);
 
         // // Change toppings
         order2.getPizza1().setNumCheese(3);
         System.out.println("Adding more cheese to your first pizza...");
-        System.out.println("Starting your new order...");
         System.out.printf("First Pizza: %s size, %d cheese, %d pepperoni, %d ham%n", order2.getPizza1().getSize(),
                 order2.getPizza1().getNumCheese(), order2.getPizza1().getNumPepperoni(),
                 order2.getPizza1().getNumHam());
@@ -161,13 +162,34 @@ public class PizzaOrder {
 
         // Should be 22 + 20 = 42
         total = order2.calcTotal();
-        System.out.printf("The total for your second order of %d pizza(s) is $%.2d%n", order2.getNumPizzas(), total);
+        System.out.printf("The total for your second order of %d pizza(s) is $%.2f%n", order2.getNumPizzas(), total);
 
         // Should still be 38
         double origTotal = order1.calcTotal();
-        System.out.printf("Lastly, just double checking, the total for the first order is $%.2d%n", origTotal);
+        System.out.println(linebreak);
+        System.out.printf("Lastly, just double checking, the total for the first order is $%.2f%n", origTotal);
+        System.out.println(linebreak);
         System.out.println("Thanks for ordering!");
 
         keyboard.close();
     }
 }
+// TEST CASE OUTPUT
+// ---------------------------------
+// Let me get started on your first order:
+// ---------------------------------
+// First Pizza: large size, 1 cheese, 0 pepperoni, 1 ham
+// Second Pizza: medium size, 2 cheese, 2 pepperoni, 0 ham
+// The total for your first order for 2 pizza(s) is $38.00
+// ---------------------------------
+// Copying your last order...
+// Starting your new order...
+// ---------------------------------
+// Adding more cheese to your first pizza...
+// First Pizza: large size, 3 cheese, 0 pepperoni, 1 ham
+// Second Pizza: medium size, 2 cheese, 2 pepperoni, 0 ham
+// The total for your second order of 2 pizza(s) is $42.00
+// ---------------------------------
+// Lastly, just double checking, the total for the first order is $38.00
+// ---------------------------------
+// Thanks for ordering!
