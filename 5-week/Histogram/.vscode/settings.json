@@ -3,6 +3,7 @@
     "java.project.outputPath": "bin",
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
-        "c:\\Users\\Ryan\\Desktop\\peralta\\java\\5-week\\Counter\\Counter.jar"
+        "c:\\Users\\Ryan\\Desktop\\peralta\\java\\5-week\\Counter\\Counter.jar",
+        "c:\\Users\\Ryan\\Desktop\\peralta\\java-class\\5-week\\Counter\\Counter.jar"
     ]
 }
