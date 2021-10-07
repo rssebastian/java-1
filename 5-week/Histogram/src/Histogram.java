@@ -1,67 +1,36 @@
 public class Histogram {
     public static double dataEntered;
-    private static Counter[] counterArr;
+    private Counter[] counterArr;
     public double[] limitArr;
     private double[] cumfreqArr;
-    private double increment;
 
+    // A constructor that accepts the number of counters and the maximum and minimum
+    // limits of the numbers (.i.e., the range of numbers).
     public Histogram(int numCounters, double maxLimit, double minLimit) {
-        // Each Counter in the counterArr should correspond to its maximum limit in the
-        // limitArr, same index
-        double temp = minLimit;
-
-        // Round the increment to 2 decimal places
-        increment = Math.round((maxLimit - minLimit) / numCounters * 100.0) / 100.0;
-
-        counterArr = new Counter[numCounters];
-        limitArr = new double[numCounters];
-        cumfreqArr = new double[numCounters];
-
-        for (int i = 0; i < counterArr.length; i++) {
-            counterArr[i] = new Counter();
-        }
-
-        for (int i = 0; i < limitArr.length; i++) {
-            limitArr[i] = Math.round((temp + increment) * 100.0) / 100.0;
-            temp = limitArr[i];
-        }
+        createHistogram(numCounters, maxLimit, minLimit);
     }
 
+    // A second constructor that accepts the maximum and minimum limits of the
+    // numbers and initializes the Histogram with 10 counters for the specified
+    // range.
     public Histogram(double maxLimit, double minLimit) {
-        double temp = minLimit;
-        increment = Math.round((maxLimit - minLimit) / 10 * 100.0) / 100.0;
-        counterArr = new Counter[10];
-        limitArr = new double[10];
-        cumfreqArr = new double[10];
-
-        for (int i = 0; i < counterArr.length; i++) {
-            counterArr[i] = new Counter();
-        }
-
-        for (int i = 0; i < limitArr.length; i++) {
-            limitArr[i] = Math.round((temp + increment) * 100.0) / 100.0;
-            temp = limitArr[i];
-        }
+        createHistogram(10, maxLimit, minLimit);
     }
 
-    public void showGram() {
-        for (int i = 0; i < limitArr.length; i++) {
-            System.out.print(limitArr[i] + " ");
-        }
-        System.out.println("");
-    }
-
-    public static void add(double x) {
+    // An add(double x) method that increments the corresponding counter.
+    public void add(double x) {
         counterArr[(int) x].increment();
         dataEntered++;
     }
 
+    // A reset() method that sets all counter frequencies to zero.
     public void reset() {
         for (int i = 0; i < counterArr.length; i++) {
             counterArr[i].resetCount();
         }
     }
 
+    // A plotFrequency() method that plots the counter frequencies
     public void plotFrequency() {
         for (int i = 0; i < counterArr.length; i++) {
             System.out.print(counterArr[i].toString() + " ");
@@ -69,6 +38,7 @@ public class Histogram {
         System.out.println("");
     }
 
+    // A plotCumulative() method that plots the cumulative frequencies.
     public void plotCumulative() {
         if (dataEntered == 0) {
             System.out.println("You need to create at least 1 data point before running this method");
@@ -76,10 +46,9 @@ public class Histogram {
         }
         for (int i = 0; i < cumfreqArr.length; i++) {
             if (i == 0) {
-                cumfreqArr[i] = Math.round((counterArr[i].getCount() / dataEntered) * 100.0 * 100.0) / 100.0;
+                cumfreqArr[i] = roundToTwo((counterArr[i].getCount() / dataEntered) * 100.0);
             } else {
-                cumfreqArr[i] = Math.round(
-                        (((counterArr[i].getCount() / dataEntered) * 100.0) + cumfreqArr[i - 1]) * 100.0) / 100.0;
+                cumfreqArr[i] = roundToTwo(((counterArr[i].getCount() / dataEntered) * 100.0) + cumfreqArr[i - 1]);
             }
         }
         for (int i = 0; i < cumfreqArr.length; i++) {
@@ -88,7 +57,23 @@ public class Histogram {
         System.out.println("");
     }
 
-    public static void main(String[] args) {
+    // Utility Methods
+    // Rounds doubles to 2 decimal places
+    private double roundToTwo(double input) {
+        return Math.round(input * 100.0) / 100.0;
+    }
 
+    private void createHistogram(int numCounters, double maxLimit, double minLimit) {
+        double temp = minLimit;
+        double increment = roundToTwo((maxLimit - minLimit) / numCounters);
+        counterArr = new Counter[numCounters];
+        limitArr = new double[numCounters];
+        cumfreqArr = new double[numCounters];
+
+        for (int i = 0; i < counterArr.length; i++) {
+            counterArr[i] = new Counter();
+            limitArr[i] = roundToTwo((temp + increment));
+            temp = limitArr[i];
+        }
     }
 }
