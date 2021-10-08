@@ -32,18 +32,23 @@ public class Histogram {
 
     // A plotFrequency() method that plots the counter frequencies
     public void plotFrequency() {
+        System.out.println("Printing Counter Frequency...");
+        System.out.println("Each # represents 20");
         for (int i = 0; i < counterArr.length; i++) {
-            System.out.print(counterArr[i].toString() + " ");
+            String tableHeader = addWhitespace(counterArr[i].toString());
+            String dataString = "";
+            int countAmount = counterArr[i].getCount();
+            while (countAmount > 20) {
+                dataString += "#";
+                countAmount -= 20;
+            }
+            System.out.println(tableHeader + dataString);
         }
         System.out.println("");
     }
 
     // A plotCumulative() method that plots the cumulative frequencies.
     public void plotCumulative() {
-        if (dataEntered == 0) {
-            System.out.println("You need to create at least 1 data point before running this method");
-            System.exit(0);
-        }
         for (int i = 0; i < cumfreqArr.length; i++) {
             if (i == 0) {
                 cumfreqArr[i] = roundToTwo((counterArr[i].getCount() / dataEntered) * 100.0);
@@ -51,8 +56,17 @@ public class Histogram {
                 cumfreqArr[i] = roundToTwo(((counterArr[i].getCount() / dataEntered) * 100.0) + cumfreqArr[i - 1]);
             }
         }
+        System.out.println("Printing Cumulative Frequency...");
+        System.out.println("Each # represents 1.0%");
         for (int i = 0; i < cumfreqArr.length; i++) {
-            System.out.print(cumfreqArr[i] + " ");
+            String tableHeader = addWhitespace(Double.toString(cumfreqArr[i]) + "%");
+            String dataString = "";
+            double percent = cumfreqArr[i];
+            while (percent > 1.0) {
+                dataString += "#";
+                percent -= 1.0;
+            }
+            System.out.println(tableHeader + dataString);
         }
         System.out.println("");
     }
@@ -63,6 +77,8 @@ public class Histogram {
         return Math.round(input * 100.0) / 100.0;
     }
 
+    // Creates the Histogram with the number of counters being flexible between
+    // constructors
     private void createHistogram(int numCounters, double maxLimit, double minLimit) {
         double temp = minLimit;
         double increment = roundToTwo((maxLimit - minLimit) / numCounters);
@@ -76,4 +92,15 @@ public class Histogram {
             temp = limitArr[i];
         }
     }
+
+    // To make table headings look prettier
+    private String addWhitespace(String count) {
+        while (count.length() < 7) {
+            count += " ";
+        }
+        return count;
+    }
+
+    // To print representative data strings given a double and how much you want
+    // each # to represent
 }
