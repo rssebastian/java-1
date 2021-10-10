@@ -13,14 +13,7 @@ public class RandomNumberTester {
         for (int i = 0; i < 10000; i++) {
             // Generate a random number between 0 and 1
             Random randNum = new Random();
-
-            // Increment the corresponding counter by 1
-            for (int j = 0; j < test1.limitArr.length; j++) {
-                if (test1.limitArr[j] > randNum.nextDouble()) {
-                    test1.add(j);
-                    break;
-                }
-            }
+            test1.add(randNum.nextDouble());
         }
         // Print the counter frequencies and the cumulative frequencies
         test1.plotFrequency();
@@ -45,12 +38,7 @@ public class RandomNumberTester {
             }
 
             // Increment the corresponding bin by 1
-            for (int j = 0; j < test2.limitArr.length; j++) {
-                if (test2.limitArr[j] > summedNum) {
-                    test2.add(j);
-                    break;
-                }
-            }
+            test2.add(summedNum);
         }
         test2.plotFrequency();
         test2.plotCumulative();
