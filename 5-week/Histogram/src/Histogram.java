@@ -63,22 +63,25 @@ public class Histogram {
     public void plotCumulative() {
         for (int i = 0; i < cumfreqArr.length; i++) {
             if (i == 0) {
-                cumfreqArr[i] = roundToTwo((counterArr[i].getCount() / dataEntered) * 100.0);
+                cumfreqArr[i] = roundToTwo((counterArr[i].getCount()));
             } else {
-                cumfreqArr[i] = roundToTwo(((counterArr[i].getCount() / dataEntered) * 100.0) + cumfreqArr[i - 1]);
+                cumfreqArr[i] = roundToTwo(((counterArr[i].getCount()) + cumfreqArr[i - 1]));
             }
         }
+
         System.out.println("Printing Cumulative Frequency...");
-        System.out.println("Each # represents 1.0%");
+        System.out.println("Each # represents 100");
         for (int i = 0; i < cumfreqArr.length; i++) {
-            String tableHeader = addWhitespace(Double.toString(cumfreqArr[i]) + "%", 7);
-            String dataString = "";
-            double percent = cumfreqArr[i];
-            while (percent > 1.0) {
-                dataString += "#";
-                percent -= 1.0;
+            String tableHeader;
+            if (i == 0) {
+                tableHeader = createTableHeading(minLimit, limitArr[i]);
+            } else {
+                tableHeader = createTableHeading(limitArr[i - 1], limitArr[i]);
             }
-            System.out.println(tableHeader + dataString);
+
+            String dataString = createDataString(cumfreqArr[i], 100);
+            String dataAmt = Double.toString(cumfreqArr[i]);
+            System.out.println(tableHeader + dataString + dataAmt);
         }
         System.out.println("");
     }
@@ -126,6 +129,6 @@ public class Histogram {
             data += "#";
             dataAmount -= hashAmt;
         }
-        return addWhitespace(data, 50);
+        return addWhitespace(data, 100);
     }
 }
