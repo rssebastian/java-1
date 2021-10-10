@@ -43,16 +43,18 @@ public class Histogram {
     // A plotFrequency() method that plots the counter frequencies
     public void plotFrequency() {
         System.out.println("Printing Counter Frequency...");
-        System.out.println("Each # represents 20");
+        System.out.println("Each # represents 25.0");
         for (int i = 0; i < counterArr.length; i++) {
-            String tableHeader = addWhitespace(counterArr[i].toString(), 7);
-            String dataString = "";
-            int countAmount = counterArr[i].getCount();
-            while (countAmount > 20) {
-                dataString += "#";
-                countAmount -= 20;
+            String tableHeader;
+            if (i == 0) {
+                tableHeader = createTableHeading(minLimit, limitArr[i]);
+            } else {
+                tableHeader = createTableHeading(limitArr[i - 1], limitArr[i]);
             }
-            System.out.println(tableHeader + dataString);
+
+            String dataString = createDataString((double) counterArr[i].getCount(), 25.0);
+            String dataAmt = counterArr[i].toString();
+            System.out.println(tableHeader + dataString + dataAmt);
         }
         System.out.println("");
     }
@@ -112,10 +114,18 @@ public class Histogram {
     }
 
     // Create table headings
-    // private String createTableHeading(String val, double minLimit) {
-    // return ""
-    // }
+    private String createTableHeading(double val1, double val2) {
+        return addWhitespace(Double.toString(val1) + " <= x < " + Double.toString(val2), 20);
+    }
 
     // To print representative data strings given a double and how much you want
     // each # to represent
+    private String createDataString(double dataAmount, double hashAmt) {
+        String data = "";
+        while (dataAmount > hashAmt) {
+            data += "#";
+            dataAmount -= hashAmt;
+        }
+        return addWhitespace(data, 50);
+    }
 }
