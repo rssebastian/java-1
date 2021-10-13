@@ -7,7 +7,7 @@ public class AddressBook {
 
     // AddressBook() constructor to create an initialize the ad
     public AddressBook() {
-
+        System.out.println("Address book created!");
     }
 
     // The add(Person p) method should add a person object to the address book. Make
@@ -98,9 +98,5 @@ public class AddressBook {
                 System.out.println(person.toString());
             }
         }
-    }
-
-    public static void main(String[] args) {
-        System.out.println("Hello, World!");
     }
 }

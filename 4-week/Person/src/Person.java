@@ -40,6 +40,6 @@ public class Person {
     }
 
     public String toString() {
-        return ("This person's name is " + getFullName() + " and their ID Number is " + getIdNum());
+        return ("Person: " + getFullName() + ", ID#: " + getIdNum());
     }
 }
