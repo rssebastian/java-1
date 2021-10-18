@@ -36,7 +36,12 @@ public class FullTimeEmployee extends Employee {
     }
 
     public void printSalary() {
-        System.out.println("$" + salary);
+        if (salary > 0.0) {
+            System.out.printf("Salary: $%.2f%n", salary);
+        } else {
+            System.out.println("No salary has been set yet");
+        }
+
     }
 
     public String[] getBenefits() {
