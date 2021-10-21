@@ -21,9 +21,25 @@ public class HourlyEmployee extends Employee {
         this.totalHours = totalHours;
     }
 
+    public int getHours() {
+        return totalHours;
+    }
+
+    public void setHours(int totalHours) {
+        this.totalHours = totalHours;
+    }
+
+    public double getHourlyRate() {
+        return hourlyRate;
+    }
+
+    public void setHourlyRate(double hourlyRate) {
+        this.hourlyRate = hourlyRate;
+    }
+
     public void printHours() {
         if (totalHours > 0) {
-            System.out.println("Total Hours over 4 weeks: " + totalHours);
+            System.out.println("Total Hours over 4 weeks: " + getHours());
         } else {
             System.out.println("This employee has not worked for the past 4 weeks");
         }
@@ -31,7 +47,14 @@ public class HourlyEmployee extends Employee {
 
     public void printWeeklyAverage() {
         if (totalHours > 0) {
-            System.out.println();
+            System.out.println("Average Hours per week: " + getHours() / 4);
+        } else {
+            System.out.println("This employee has not worked for the past 4 weeks");
         }
     }
+
+    public void printTotalWages() {
+        System.out.printf("This employee earned $%.2f for the past 4 weeks.%n", getHours() * getHourlyRate());
+    }
+
 }

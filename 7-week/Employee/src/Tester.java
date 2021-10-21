@@ -27,7 +27,23 @@ public class Tester {
         fullTimeEmployee.printBenefits();
         fullTimeEmployee.removeBenefit("Free Lunch");
         fullTimeEmployee.printBenefits();
+        System.out.println(linebreak);
 
+        System.out.println("Testing HourlyEmployee Class...");
+        HourlyEmployee hourlyEmployee = new HourlyEmployee("Ben", "Benson", "Baking");
+        System.out.println(hourlyEmployee.toString());
+        System.out.println("Getting + Setting Hourly Rate...");
+        System.out.println(hourlyEmployee.getHourlyRate());
+        hourlyEmployee.setHourlyRate(16.50);
+        System.out.println(hourlyEmployee.getHourlyRate());
+        System.out.println("Getting + Setting Hours Worked");
+        System.out.println(hourlyEmployee.getHours());
+        hourlyEmployee.setHours(160);
+        System.out.println(hourlyEmployee.getHours());
+        System.out.println("Testing Print Functions...");
+        hourlyEmployee.printHours();
+        hourlyEmployee.printTotalWages();
+        hourlyEmployee.printWeeklyAverage();
         System.out.println(linebreak);
 
     }
