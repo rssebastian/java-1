@@ -1,5 +1,6 @@
 public class LibraryTester {
     public static void main(String[] args) {
+        String linebreak = "--------------------";
         Library lib = new Library();
 
         Book testBook1 = new Book();
@@ -102,8 +103,23 @@ public class LibraryTester {
         testBook10.setCirculation(true);
         lib.addBook(testBook10);
 
+        System.out.println(linebreak);
+        System.out.println(linebreak);
+        System.out.println("Printing all books...");
         lib.printAllBooks();
-
+        System.out.println(linebreak);
+        System.out.println(linebreak);
+        System.out.println("Testing SearchBySubject...");
+        System.out.println("Searching for 'Fiction'...");
+        lib.SearchBySubject("Fiction");
+        System.out.println(linebreak);
+        System.out.println("Searching for 'The'...");
+        lib.SearchBySubject("The");
+        System.out.println(linebreak);
+        System.out.println("Searching for 'Action and Adventure'...");
+        lib.SearchBySubject("Action and Adventure");
+        System.out.println(linebreak);
+        System.out.println("Searching for 'Classic'...");
+        lib.SearchBySubject("Classic");
     }
-
 }
