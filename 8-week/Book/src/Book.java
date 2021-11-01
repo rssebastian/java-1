@@ -77,12 +77,21 @@ public class Book {
     }
 
     public String toString() {
-        String titleStr = "Title: " + getTitle() + ", ";
+        String titleStr = "Title: " + getTitle() + ", \r\n";
         String authorStr = "Author(s): ";
         for (String author : getAuthors()) {
             authorStr += author + ", ";
         }
-        String lccStr = "LCC Number: " + getLcc();
-        return titleStr + authorStr + lccStr;
+        authorStr += "\r\n";
+        String lccStr = "LCC Number: " + getLcc() + ", \r\n";
+        String subjectStr = "Subject(s): ";
+        for (String subject : getSubjects()) {
+            subjectStr += subject + ", ";
+        }
+        subjectStr += ", \r\n";
+        String pubStr = "Publisher: " + getPublisher() + ", \r\n";
+        String yearStr = "Year Published: " + String.valueOf(getYear()) + ", \r\n";
+        String circStr = "Circulating: " + String.valueOf(getCirculating()) + "\r\n";
+        return titleStr + authorStr + lccStr + subjectStr + pubStr + yearStr + circStr;
     }
 }

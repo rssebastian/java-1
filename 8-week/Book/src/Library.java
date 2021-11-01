@@ -29,7 +29,13 @@ public class Library {
             }
         }
         for (Book b : results) {
-            System.out.println(b.toString());
+            String titleStr = "Title: " + b.getTitle() + ", ";
+            String authorStr = "Author(s): ";
+            for (String author : b.getAuthors()) {
+                authorStr += author + ", ";
+            }
+            String lccStr = "LCC Number: " + b.getLcc();
+            System.out.println(titleStr + authorStr + lccStr);
         }
     }
 }
