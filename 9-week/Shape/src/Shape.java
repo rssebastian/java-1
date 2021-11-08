@@ -11,4 +11,6 @@ public abstract class Shape {
         return shapeID;
     }
 
+    public abstract void move(int x, int y, int z);
+
 }
