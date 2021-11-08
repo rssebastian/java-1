@@ -3,4 +3,6 @@ public abstract class OneDimensionalShape extends Shape {
         super();
     }
 
+    public abstract double getLength();
+
 }
