@@ -1,5 +1,5 @@
 public abstract class Shape {
-    public static int shapeIDCount;
+    private static int shapeIDCount;
     private int shapeID;
 
     public Shape() {

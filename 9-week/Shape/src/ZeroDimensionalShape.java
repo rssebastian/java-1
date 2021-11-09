@@ -1,5 +1,5 @@
 public abstract class ZeroDimensionalShape extends Shape {
-    public ZeroDimensionalShape() {
+    protected ZeroDimensionalShape() {
         super();
     }
 }

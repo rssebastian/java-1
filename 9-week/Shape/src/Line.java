@@ -12,7 +12,9 @@ public class Line extends OneDimensionalShape {
     }
 
     public double getLength() {
-        return Math.pow(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2) + Math.pow((z2 - z1), 2), 0.5);
+        return Math.round(
+                (Math.pow(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2) + Math.pow((z2 - z1), 2), 0.5)) * 100.0)
+                / 100.0;
     }
 
     public void move(int x, int y, int z) {
@@ -22,6 +24,11 @@ public class Line extends OneDimensionalShape {
         y2 += y;
         z1 += z;
         z2 += z;
+    }
+
+    public String toString() {
+        return "Shape: " + this.getClass().getSimpleName() + "\r\nShapeID: " + getID() + "\r\nPoint 1: (" + x1 + ","
+                + y1 + "," + z1 + ")\r\nPoint 2: (" + x2 + "," + y2 + "," + z2 + ")\r\nLength: " + getLength();
     }
 
 }

@@ -1,5 +1,5 @@
 public abstract class OneDimensionalShape extends Shape {
-    public OneDimensionalShape() {
+    protected OneDimensionalShape() {
         super();
     }
 

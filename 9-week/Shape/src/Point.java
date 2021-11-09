@@ -43,4 +43,9 @@ public class Point extends ZeroDimensionalShape {
         yCoord += y;
         zCoord += z;
     }
+
+    public String toString() {
+        return "Shape: " + this.getClass().getSimpleName() + "\r\nShapeID: " + getID() + "\r\nX-Coordinate: "
+                + this.getX() + "\r\nY-Coordinate: " + this.getY() + "\r\nZ-Coordinate: " + this.getZ();
+    }
 }

@@ -1,6 +1,7 @@
 public abstract class TwoDimensionalShape extends Shape {
-    public TwoDimensionalShape() {
+    protected TwoDimensionalShape() {
         super();
     }
 
+    public abstract double getArea();
 }
