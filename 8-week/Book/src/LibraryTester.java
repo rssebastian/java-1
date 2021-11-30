@@ -123,3 +123,118 @@ public class LibraryTester {
         lib.SearchBySubject("Classic");
     }
 }
+
+// TEST CASE OUTPUT
+// --------------------
+// --------------------
+// Printing all books...
+// Title: The Three Musketeers, 
+// Author(s): Alexandre Dumas,
+// LCC Number: TB0123456789,
+// Subject(s): Action and Adventure, Fiction, Comedy, ,
+// Publisher: CreateSpace Independent Publishing Platform,
+// Year Published: 2014,
+// Circulating: true
+
+// Title: The Life of Pi,
+// Author(s): Jack London,
+// LCC Number: TB1234567890,
+// Subject(s): Action and Adventure, Fiction, Short Story, ,
+// Publisher: CreateSpace Independent Publishing Platform,
+// Year Published: 2020,
+// Circulating: true
+
+// Title: To Kill a Mockingbird,
+// Author(s): Harper Lee,
+// LCC Number: TB2345678901,
+// Subject(s): Classic, Fiction, ,
+// Publisher: Harper Perennial,
+// Year Published: 2002,
+// Circulating: true
+
+// Title: The Adventures of Sherlock Holmes,
+// Author(s): Sir Arthur Conan Doyle,
+// LCC Number: TB3456789012,
+// Subject(s): Classic, Mystery, ,
+// Publisher: CreateSpace Independent Publishing Platform,
+// Year Published: 2002,
+// Circulating: true
+
+// Title: Little Women,
+// Author(s): Louisa May Alcott,
+// LCC Number: TB4567890123,
+// Subject(s): Classic, Fiction, ,
+// Publisher: Little, Brown and Company,
+// Year Published: 2018,
+// Circulating: true
+
+// Title: And Then There Were None,
+// Author(s): Agatha Christie,
+// LCC Number: TB5678901234,
+// Subject(s): Mystery, Fiction, ,
+// Publisher: William Morrow,
+// Year Published: 2011,
+// Circulating: true
+
+// Title: The Haunting of Hill House, 
+// Author(s): Shirley Jackson,
+// LCC Number: TB6789012345,
+// Subject(s): Horror, Fiction, ,
+// Publisher: Penguin Classics,
+// Year Published: 2006,
+// Circulating: true
+
+// Title: Bird Box,
+// Author(s): Josh Malerman,
+// LCC Number: TB7890123456,
+// Subject(s): Horror, Fiction, ,
+// Publisher: Ecco,
+// Year Published: 2014,
+// Circulating: true
+
+// Title: Brazen and the Beast,
+// Author(s): Sarah MacLean,
+// LCC Number: TB8901234567,
+// Subject(s): Romance, Fiction, ,
+// Publisher: Avon,
+// Year Published: 2019,
+// Circulating: true
+
+// Title: The Hunger Games,
+// Author(s): Suzanne Collins,
+// LCC Number: TB9012345678,
+// Subject(s): Sci-Fi, Fiction, Action and Adventure, ,
+// Publisher: Scholastic Inc.,
+// Year Published: 2011,
+// Circulating: true
+
+// --------------------
+// --------------------
+// Testing SearchBySubject...
+// Searching for 'Fiction'...
+// Title: The Three Musketeers, Author(s): Alexandre Dumas, LCC Number: TB0123456789
+// Title: The Life of Pi, Author(s): Jack London, LCC Number: TB1234567890
+// Title: To Kill a Mockingbird, Author(s): Harper Lee, LCC Number: TB2345678901
+// Title: Little Women, Author(s): Louisa May Alcott, LCC Number: TB4567890123
+// Title: And Then There Were None, Author(s): Agatha Christie, LCC Number: TB5678901234
+// Title: The Haunting of Hill House, Author(s): Shirley Jackson, LCC Number: TB6789012345
+// Title: Bird Box, Author(s): Josh Malerman, LCC Number: TB7890123456
+// Title: Brazen and the Beast, Author(s): Sarah MacLean, LCC Number: TB8901234567
+// Title: The Hunger Games, Author(s): Suzanne Collins, LCC Number: TB9012345678
+// --------------------
+// Searching for 'The'...
+// Title: The Three Musketeers, Author(s): Alexandre Dumas, LCC Number: TB0123456789
+// Title: The Life of Pi, Author(s): Jack London, LCC Number: TB1234567890
+// Title: The Adventures of Sherlock Holmes, Author(s): Sir Arthur Conan Doyle, LCC Number: TB3456789012
+// Title: The Haunting of Hill House, Author(s): Shirley Jackson, LCC Number: TB6789012345
+// Title: The Hunger Games, Author(s): Suzanne Collins, LCC Number: TB9012345678
+// --------------------
+// Searching for 'Action and Adventure'...
+// Title: The Three Musketeers, Author(s): Alexandre Dumas, LCC Number: TB0123456789
+// Title: The Life of Pi, Author(s): Jack London, LCC Number: TB1234567890
+// Title: The Hunger Games, Author(s): Suzanne Collins, LCC Number: TB9012345678
+// --------------------
+// Searching for 'Classic'...
+// Title: To Kill a Mockingbird, Author(s): Harper Lee, LCC Number: TB2345678901
+// Title: The Adventures of Sherlock Holmes, Author(s): Sir Arthur Conan Doyle, LCC Number: TB3456789012
+// Title: Little Women, Author(s): Louisa May Alcott, LCC Number: TB4567890123
