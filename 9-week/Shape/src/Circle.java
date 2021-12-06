@@ -1,11 +1,10 @@
 public class Circle extends TwoDimensionalShape {
-    private int centerX, centerY, centerZ, radius;
+    private Point center;
+    private int radius;
 
     public Circle(Point p, int radius) {
         super();
-        this.centerX = p.getX();
-        this.centerY = p.getY();
-        this.centerZ = p.getZ();
+        this.center = p;
         this.radius = radius;
     }
 
@@ -14,13 +13,14 @@ public class Circle extends TwoDimensionalShape {
     }
 
     public void move(int x, int y, int z) {
-        centerX += x;
-        centerY += y;
-        centerZ += z;
+        center.setX(center.getX() + x);
+        center.setY(center.getY() + y);
+        center.setZ(center.getZ() + z);
     }
 
     public String toString() {
-        return "Shape: " + this.getClass().getSimpleName() + "\r\nShapeID: " + getID() + "\r\nCenter: (" + centerX + ","
-                + centerY + "," + centerZ + ")\r\nRadius: " + radius + "\r\nArea: " + getArea();
+        return "Shape: " + this.getClass().getSimpleName() + "\r\nShapeID: " + getID() + "\r\nCenter: (" + center.getX()
+                + ","
+                + center.getY() + "," + center.getZ() + ")\r\nRadius: " + radius + "\r\nArea: " + getArea();
     }
 }

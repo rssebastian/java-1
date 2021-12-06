@@ -1,34 +1,34 @@
 public class Line extends OneDimensionalShape {
-    private int x1, x2, y1, y2, z1, z2;
+    private Point p1;
+    private Point p2;
 
     public Line(Point p1, Point p2) {
         super();
-        x1 = p1.getX();
-        y1 = p1.getY();
-        z1 = p1.getZ();
-        x2 = p2.getX();
-        y2 = p2.getY();
-        z2 = p2.getZ();
+        this.p1 = p1;
+        this.p2 = p2;
     }
 
     public double getLength() {
         return Math.round(
-                (Math.pow(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2) + Math.pow((z2 - z1), 2), 0.5)) * 100.0)
+                (Math.pow(Math.pow((p2.getX() - p1.getX()), 2) + Math.pow((p2.getY() - p1.getY()), 2)
+                        + Math.pow((p2.getZ() - p1.getZ()), 2), 0.5)) * 100.0)
                 / 100.0;
     }
 
     public void move(int x, int y, int z) {
-        x1 += x;
-        x2 += x;
-        y1 += y;
-        y2 += y;
-        z1 += z;
-        z2 += z;
+        p1.setX(p1.getX() + x);
+        p2.setX(p2.getX() + x);
+        p1.setY(p1.getY() + y);
+        p2.setY(p2.getY() + y);
+        p1.setZ(p1.getZ() + z);
+        p2.setZ(p2.getZ() + z);
     }
 
     public String toString() {
-        return "Shape: " + this.getClass().getSimpleName() + "\r\nShapeID: " + getID() + "\r\nPoint 1: (" + x1 + ","
-                + y1 + "," + z1 + ")\r\nPoint 2: (" + x2 + "," + y2 + "," + z2 + ")\r\nLength: " + getLength();
+        return "Shape: " + this.getClass().getSimpleName() + "\r\nShapeID: " + getID() + "\r\nPoint 1: (" + p1.getX()
+                + ","
+                + p1.getY() + "," + p1.getZ() + ")\r\nPoint 2: (" + p2.getX() + "," + p2.getY() + "," + p2.getZ()
+                + ")\r\nLength: " + getLength();
     }
 
 }
