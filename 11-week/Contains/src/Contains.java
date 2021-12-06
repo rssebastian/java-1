@@ -1,10 +1,14 @@
 public class Contains {
     public static boolean contains(String haystack, String needle) {
-        String segment = haystack.substring(0, needle.length());
-        if (segment.equals(needle)) {
+        if (haystack.equals(needle)) {
             return true;
-        } else if (haystack.length() == needle.length()) {
+        } else if (haystack.length() < needle.length()) {
             return false;
+        } else if (haystack.charAt(0) == needle.charAt(0)) {
+            if (needle.length() == 1) {
+                return true;
+            }
+            return contains(haystack.substring(1), needle.substring(1));
         } else {
             return contains(haystack.substring(1), needle);
         }
